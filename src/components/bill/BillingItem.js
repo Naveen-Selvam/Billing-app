@@ -127,10 +127,6 @@ const BillingItem = (props) => {
                 className="bill"
                 onChange={handleChangeProduct}
                 value={product}
-<<<<<<< HEAD:src/components/bill/BillingItem.js
-=======
-                
->>>>>>> origin/main:src/components/BillingItem.js
               >
                 <option value="" />
                 {products.map((product) => {
