@@ -28,10 +28,18 @@ const EachCustomerBill = (props) => {
       <Table border="1" style={{ width: "200px" }}>
         <TableHead style={{ backgroundColor: "gray" }}>
           <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell>price</TableCell>
-            <TableCell>quantity</TableCell>
-            <TableCell>subTotal</TableCell>
+            <TableCell>
+              <h4>Name</h4>
+            </TableCell>
+            <TableCell>
+              <h4>price</h4>
+            </TableCell>
+            <TableCell>
+              <h4>quantity</h4>
+            </TableCell>
+            <TableCell>
+              <h4>subTotal</h4>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

@@ -57,8 +57,13 @@ const BillingItem = (props) => {
   };
 
   const handleAdd = () => {
-    if (customer.length === 0 || product.length === 0 || date.length === 0) {
-      swal("Add your Items");
+    if (
+      customer.length === 0 ||
+      product.length === 0 ||
+      date.length === 0 ||
+      qty <= 0
+    ) {
+      swal("Pls check your details");
     } else {
       const data = {
         product: product,
