@@ -10,6 +10,7 @@ import MainProduct from "../components/product/MainProduct";
 import MainBilling from "../components/bill/MainBilling";
 import Profile from "./Profile";
 import swal from "sweetalert";
+import CustomerView from "./customer/CustomerView";
 
 const NavbarLink = styled.div`
   width: 100 px;
@@ -89,6 +90,7 @@ const Navbar = (props) => {
           <Route path="/product" exact component={MainProduct} />
           <Route path="/billing" exact component={MainBilling} />
           <Route path="/profile" exact component={Profile} />
+          <Route path="/customer/:id" exact component={CustomerView} />
         </div>
       ) : (
         <div>

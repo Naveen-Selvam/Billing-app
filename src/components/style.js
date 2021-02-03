@@ -24,9 +24,9 @@ export const paperStyle1 = {
 };
 export const paperStyle3 = {
   padding: "1rem",
-  height: "30vh",
-  width: 300,
-  margin: "20px auto",
+  height: "20vh",
+  width: 250,
+  margin: "10px auto",
   backgroundColor: "#F4B342",
 };
 

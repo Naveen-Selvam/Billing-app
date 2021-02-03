@@ -44,9 +44,10 @@ h1 {
   text-align: center;
 }
 .number {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   text-align: center;
   font-size: 4rem;
+  font-style: italic;
 }
 
 .card:hover {
@@ -55,4 +56,15 @@ h1 {
 
 .container {
   padding: 2px 16px;
+}
+.cardItem {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.customerViewTable {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }

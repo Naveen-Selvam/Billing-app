@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -9,15 +10,16 @@ import TableRow from "@material-ui/core/TableRow";
 import { startDeleteCustomer } from "../../action/customeraction";
 import { useDispatch } from "react-redux";
 import Modal from "react-modal";
+import CustomerView from "./CustomerView";
 import Customer from "./CustomerForm";
 
 const CustomerItem = (props) => {
   const [open, setOpen] = useState(false);
+  const [customersView, setCustomersView] = useState(false);
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
-
   const dispatch = useDispatch();
   const { customers } = props;
 
@@ -27,6 +29,14 @@ const CustomerItem = (props) => {
       dispatch(startDeleteCustomer(id));
     }
   };
+  const customerToggle = () => {
+    setCustomersView(!customersView);
+  };
+
+  const handleView = () => {
+    customerToggle();
+  };
+
   const toggleFunc = () => {
     setOpen(!open);
   };
@@ -54,6 +64,9 @@ const CustomerItem = (props) => {
                 <h4>Email</h4>
               </TableCell>
               <TableCell align="right">
+                <h4>View</h4>
+              </TableCell>
+              <TableCell align="right">
                 <h4>Edit</h4>
               </TableCell>
               <TableCell align="right">
@@ -69,6 +82,11 @@ const CustomerItem = (props) => {
                   <TableCell>{customer.name}</TableCell>
                   <TableCell align="right">{customer.mobile}</TableCell>
                   <TableCell align="right">{customer.email}</TableCell>
+                  <TableCell align="right">
+                    <Link to={`/customer/${customer._id}`} onClick={handleView}>
+                      <Button>View</Button>
+                    </Link>
+                  </TableCell>
                   <TableCell align="right">
                     <Button
                       color="primary"
@@ -108,6 +126,7 @@ const CustomerItem = (props) => {
           </Button>
         </Modal>
       )}
+      {customersView && <CustomerView />}
     </div>
   );
 };

@@ -7,16 +7,18 @@ import "./index.css";
 import configureStore from "./store/configureStore";
 import { startGetCustomer } from "./action/customeraction";
 import { startGetProduct } from "./action/productaction";
+import { startGetBill } from "./action/billAction";
 
 const store = configureStore();
 
-// store.subscribe(() => {
-//   console.log(store.getState());
-// });
+store.subscribe(() => {
+  console.log(store.getState());
+});
 
 if (localStorage.getItem("token")) {
   store.dispatch(startGetCustomer());
   store.dispatch(startGetProduct());
+  store.dispatch(startGetBill());
 }
 
 ReactDOM.render(

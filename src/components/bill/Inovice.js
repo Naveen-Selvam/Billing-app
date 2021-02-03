@@ -50,8 +50,8 @@ const Inovice = (props) => {
     <div>
       <Modal isOpen={billId !== "undefined"}>
         <h1>Invoice</h1>
-        <h2>Date - {currentBill?.date?.slice(0, 10)}</h2>
-        <h2>{customer[0]?.name}</h2>
+        <h2>Date : {currentBill?.date?.slice(0, 10)}</h2>
+        <h2>Customer Name : {customer[0]?.name}</h2>
         <TableContainer>
           <Table>
             <TableHead>

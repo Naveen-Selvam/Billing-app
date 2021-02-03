@@ -30,7 +30,7 @@ const GenerateBill = (props) => {
   return (
     <Card
       variant="outlined"
-      style={{ width: "250px", backgroundColor: "#adad85" }}
+      style={{ width: "300px", backgroundColor: "#adad85" }}
     >
       <Paper elevation={20}>
         <CardContent>

@@ -22,6 +22,8 @@ const BillingItem = (props) => {
   const [product, setProduct] = useState("");
   const [qty, setQty] = useState(1);
   const [date, setDate] = useState(new Date());
+  console.log(date);
+
   const [toggle, setToggleFunc] = useState(false);
   const lineItems = useSelector((state) => state.lineItems);
 
@@ -78,7 +80,6 @@ const BillingItem = (props) => {
     if (lineItems.length > 0) {
       dispatch(startPostBill(formData));
       handleToggleFunc();
-      setDate("");
       setCustomer("");
       setProduct("");
       setQty("");
@@ -127,10 +128,6 @@ const BillingItem = (props) => {
                 className="bill"
                 onChange={handleChangeProduct}
                 value={product}
-<<<<<<< HEAD:src/components/bill/BillingItem.js
-=======
-                
->>>>>>> origin/main:src/components/BillingItem.js
               >
                 <option value="" />
                 {products.map((product) => {
@@ -177,10 +174,12 @@ const BillingItem = (props) => {
           </h2>
         ) : (
           <div>
-            <h2>Items in cart</h2>
-            {lineItems?.map((item, i) => {
-              return <GenerateBill key={i} {...item} />;
-            })}
+            <h2 style={{ textAlign: "center" }}>Items in cart</h2>
+            <div className="cardItem">
+              {lineItems?.map((item, i) => {
+                return <GenerateBill key={i} {...item} />;
+              })}
+            </div>
           </div>
         )}
       </div>

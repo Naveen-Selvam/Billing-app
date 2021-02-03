@@ -6,7 +6,7 @@ const productReducer = (state = initialProduct, action) => {
       return [...action.payload];
     }
     case "POST_PRODUCT": {
-      return [...state, action.payload];
+      return [action.payload, ...state];
     }
     case "EDIT_PRODUCT": {
       return state.map((product) => {
