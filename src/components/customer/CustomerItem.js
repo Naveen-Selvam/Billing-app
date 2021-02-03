@@ -8,7 +8,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import { startDeleteCustomer } from "../../action/customeraction";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Modal from "react-modal";
 import CustomerView from "./CustomerView";
 import Customer from "./CustomerForm";
@@ -21,7 +21,7 @@ const CustomerItem = (props) => {
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
   const dispatch = useDispatch();
-  const { customers } = props;
+  const customers = useSelector((state) => state.customer);
 
   const handleDelete = (id) => {
     const result = window.confirm("Are you Sure");

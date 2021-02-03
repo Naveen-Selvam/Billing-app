@@ -24,7 +24,7 @@ const MainCustomer = (props) => {
             No Existing Customer
           </h2>
         ) : (
-          <CustomerItem customers={customers} />
+          <CustomerItem />
         )}
       </div>
     </div>

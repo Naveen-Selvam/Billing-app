@@ -20,12 +20,10 @@ const EachCustomerBill = (props) => {
       product.push(result[0]);
     });
   }
-  console.log(product);
-  console.log(customer);
 
   return (
-    <div style={{ margin: "1rem" }}>
-      <Table border="1" style={{ width: "200px" }}>
+    <div style={{ margin: "0.5rem" }}>
+      <Table border="1" style={{ width: "250px" }}>
         <TableHead style={{ backgroundColor: "gray" }}>
           <TableRow>
             <TableCell>

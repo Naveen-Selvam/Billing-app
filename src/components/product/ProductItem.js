@@ -7,7 +7,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import { startDeleteProduct } from "../../action/productaction";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Modal from "react-modal";
 import Product from "./ProductForm";
 
@@ -16,8 +16,9 @@ const ProductItem = (props) => {
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
-
+  const products = useSelector((state) => state.product);
   const dispatch = useDispatch();
+  console.log(products);
 
   const handleDelete = (id) => {
     const result = window.confirm("Are you Sure");
@@ -36,7 +37,6 @@ const ProductItem = (props) => {
     setPrice(product.price);
   };
 
-  const { products } = props;
   return (
     <div>
       <TableContainer style={{ width: "35rem", marginLeft: "25rem" }}>

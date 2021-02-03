@@ -24,7 +24,7 @@ const MainProduct = (props) => {
             No Existing Products
           </h2>
         ) : (
-          <ProductItem products={products} />
+          <ProductItem />
         )}
       </div>
     </div>

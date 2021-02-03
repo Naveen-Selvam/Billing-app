@@ -11,6 +11,7 @@ import MainBilling from "../components/bill/MainBilling";
 import Profile from "./Profile";
 import swal from "sweetalert";
 import CustomerView from "./customer/CustomerView";
+import img3 from "../img/img3.png";
 
 const NavbarLink = styled.div`
   width: 100 px;
@@ -36,8 +37,17 @@ const Navbar = (props) => {
     <div>
       <NavbarLink>
         <div>
-          {!login && (
+          {!login ? (
             <h2 style={{ marginRight: "50rem" }}>Billing Application</h2>
+          ) : (
+            <img
+              style={{
+                width: "110px",
+                height: "80px",
+                paddingRight: "40rem",
+              }}
+              src={img3}
+            />
           )}
         </div>
 
