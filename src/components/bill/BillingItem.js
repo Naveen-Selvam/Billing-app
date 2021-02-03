@@ -179,7 +179,7 @@ const BillingItem = (props) => {
           </h2>
         ) : (
           <div>
-            <h2 style={{ textAlign: "center" }}>Items in cart</h2>
+            <h2 style={{ textAlign: "center" }}>Items Added to Cart</h2>
             <div className="cardItem">
               {lineItems?.map((item, i) => {
                 return <GenerateBill key={i} {...item} />;

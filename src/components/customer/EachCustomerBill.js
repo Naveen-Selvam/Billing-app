@@ -22,8 +22,8 @@ const EachCustomerBill = (props) => {
   }
 
   return (
-    <div style={{ margin: "0.5rem" }}>
-      <Table border="1" style={{ width: "250px" }}>
+    <div style={{ margin: "0.25rem" }}>
+      <Table border="1" style={{ width: "150px" }}>
         <TableHead style={{ backgroundColor: "gray" }}>
           <TableRow>
             <TableCell>

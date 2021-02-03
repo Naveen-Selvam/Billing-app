@@ -30,12 +30,12 @@ const GenerateBill = (props) => {
   return (
     <Card
       variant="outlined"
-      style={{ width: "300px", backgroundColor: "#adad85" }}
+      style={{ width: "300px", backgroundColor: "#adad85", margin: "2px" }}
     >
       <Paper elevation={20}>
         <CardContent>
           <Typography variant="h5" component="h2">
-            Name :{productDetails[0].name} - ₹{productDetails[0].price}
+            Name : {productDetails[0].name} - ₹{productDetails[0].price}
           </Typography>
           <Typography variant="h5">Qty : {quantity}</Typography>
         </CardContent>
