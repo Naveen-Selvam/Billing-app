@@ -77,7 +77,7 @@ const Dahboard = (props) => {
       </div>
 
       <div>
-        <h2>Last 5 added customers</h2>
+        {last5cust.length > 0 && <h2>Last 5 added customers</h2>}
         <div style={{ display: "flex" }}>
           {last5cust?.map((cust) => {
             return (
@@ -92,7 +92,7 @@ const Dahboard = (props) => {
           })}
         </div>
 
-        <h2>Last 5 added products</h2>
+        {last5prod.length > 0 && <h2>Last 5 added products</h2>}
         <div style={{ display: "flex" }}>
           {last5prod?.map((prod) => {
             return (
@@ -108,7 +108,7 @@ const Dahboard = (props) => {
       </div>
 
       <div>
-        <h2>Last 5 generated Bills</h2>
+        {last5bill.length > 0 && <h2>Last 5 generated Bills</h2>}
         <div className="customerViewTable">
           {last5bill?.map((bill, i) => {
             return (

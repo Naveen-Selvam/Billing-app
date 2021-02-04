@@ -28,7 +28,11 @@ const CustomerView = (props) => {
   }
   if (customers.length > 0) {
     particularCustomerObj = customers.find((customer) => {
-      return customer._id === result[0]?.customer;
+      if (customer._id === result[0]?.customer) {
+        return customer;
+      } else if (result.length === 0) {
+        return customer._id === props.match.params.id;
+      }
     });
   }
 
