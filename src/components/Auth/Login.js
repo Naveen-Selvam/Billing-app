@@ -56,7 +56,7 @@ const Login = (props) => {
     setPassword("");
   };
   return (
-    <div>
+    <div style={{ marginTop: "1rem" }}>
       <Grid align="center">
         <Paper elevation={10} style={paperStyle1}>
           <Avatar style={avatar}>
