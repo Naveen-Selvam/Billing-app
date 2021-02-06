@@ -42,8 +42,8 @@ const Navbar = (props) => {
           ) : (
             <img
               style={{
-                width: "110px",
-                height: "80px",
+                width: "90px",
+                height: "60px",
                 paddingRight: "40rem",
               }}
               src={img3}

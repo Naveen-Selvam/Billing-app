@@ -9,6 +9,7 @@ const emptyLineItems = (data) => {
 };
 
 export const startLineItems = (data) => {
+  localStorage.setItem("data", data);
   return lineItems(data);
 };
 

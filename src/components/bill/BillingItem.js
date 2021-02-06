@@ -22,7 +22,6 @@ const BillingItem = (props) => {
   const [product, setProduct] = useState("");
   const [qty, setQty] = useState(1);
   const [date, setDate] = useState(new Date());
-  console.log(date);
 
   const [toggle, setToggleFunc] = useState(false);
   const lineItems = useSelector((state) => state.lineItems);
@@ -37,6 +36,7 @@ const BillingItem = (props) => {
   const products = useSelector((state) => state.product);
 
   const handleChangeCustomer = (e) => {
+    localStorage.setItem("customer", e.target.value);
     setCustomer(e.target.value);
   };
 
@@ -49,6 +49,7 @@ const BillingItem = (props) => {
   };
 
   const handleDate = (e) => {
+    localStorage.setItem("date", e.target.value);
     setDate(e.target.value);
   };
 
@@ -82,6 +83,7 @@ const BillingItem = (props) => {
       customer,
       lineItems,
     };
+
     if (lineItems.length > 0) {
       dispatch(startPostBill(formData));
       handleToggleFunc();

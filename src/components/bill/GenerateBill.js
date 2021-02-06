@@ -21,7 +21,7 @@ const GenerateBill = (props) => {
     }
   };
 
-  if (product) {
+  if (product || localStorage.getItem("formData")) {
     productDetails = products.filter((pdt) => {
       return pdt._id === product;
     });

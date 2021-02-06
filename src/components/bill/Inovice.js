@@ -28,6 +28,7 @@ const Inovice = (props) => {
 
   const handleClose = () => {
     handleToggleFunc();
+    localStorage.removeItem("formData");
   };
   const billId = localStorage.getItem("bill_id");
 
@@ -73,7 +74,7 @@ const Inovice = (props) => {
             <TableBody>
               {product.map((pdt, i) => {
                 return (
-                  <TableRow key={pdt.id}>
+                  <TableRow key={pdt._id}>
                     <TableCell>{pdt.name}</TableCell>
                     <TableCell>{pdt.price}</TableCell>
                     <TableCell>{currentBill?.lineItems[i].quantity}</TableCell>
