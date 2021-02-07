@@ -81,8 +81,11 @@ const Dahboard = (props) => {
         <div style={{ display: "flex" }}>
           {last5cust?.map((cust) => {
             return (
-              <Grid style={{ padding: "0.5rem", backgroundColor: "#e6ecff" }}>
-                <Paper elevation={10} style={paperStyle7} key={cust._id}>
+              <Grid
+                key={cust._id}
+                style={{ padding: "0.5rem", backgroundColor: "#e6ecff" }}
+              >
+                <Paper elevation={10} style={paperStyle7}>
                   <h3>Name - {cust.name}</h3>
                   <h3>Mobile - {cust.mobile}</h3>
                   <h3>mail-{cust.email}</h3>
@@ -96,8 +99,11 @@ const Dahboard = (props) => {
         <div style={{ display: "flex" }}>
           {last5prod?.map((prod) => {
             return (
-              <Grid style={{ padding: "0.5rem", backgroundColor: "#ebfafa" }}>
-                <Paper elevation={10} style={paperStyle7} key={prod._id}>
+              <Grid
+                key={prod._id}
+                style={{ padding: "0.5rem", backgroundColor: "#ebfafa" }}
+              >
+                <Paper elevation={10} style={paperStyle7}>
                   <h3>Name - {prod.name}</h3>
                   <h3>Price - {prod.price}</h3>
                 </Paper>

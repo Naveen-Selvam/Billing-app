@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 
@@ -43,7 +42,7 @@ const EachCustomerBill = (props) => {
         <TableBody>
           {product.map((ptd, i) => {
             return (
-              <TableRow>
+              <TableRow key={i}>
                 <TableCell>{ptd?.name}</TableCell>
                 <TableCell>{ptd?.price}</TableCell>
                 <TableCell>{customer?.lineItems[i].quantity}</TableCell>
