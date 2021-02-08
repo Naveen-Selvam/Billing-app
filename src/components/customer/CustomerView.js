@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { startGetBill } from "../../action/billAction";
 import { useDispatch, useSelector } from "react-redux";
 import EachCustomerBill from "./EachCustomerBill";

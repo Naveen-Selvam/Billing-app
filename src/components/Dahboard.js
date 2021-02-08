@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { startGetCustomer } from "../action/customeraction";
 import { startGetProduct } from "../action/productaction";
 import { startGetBill } from "../action/billAction";

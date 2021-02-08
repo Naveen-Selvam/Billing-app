@@ -46,6 +46,7 @@ const Navbar = (props) => {
                 height: "60px",
                 paddingRight: "40rem",
               }}
+              alt="avatar"
               src={img3}
             />
           )}
