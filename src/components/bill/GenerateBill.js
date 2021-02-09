@@ -34,7 +34,9 @@ const GenerateBill = (props) => {
       style={{ width: "270px", backgroundColor: "#adad85", margin: "2px" }}
     >
       <Paper elevation={20}>
-        <img src={img5} height="150" width="220"></img>
+        <div style={{ paddingLeft: "2rem" }}>
+          <img src={img5} height="170" width="200"></img>
+        </div>
         <CardContent>
           <Typography variant="h5" component="h2">
             Name : {productDetails[0].name} - ₹{productDetails[0].price}

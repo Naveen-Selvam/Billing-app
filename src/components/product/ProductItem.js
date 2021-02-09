@@ -18,7 +18,6 @@ const ProductItem = (props) => {
   const [price, setPrice] = useState("");
   const products = useSelector((state) => state.product);
   const dispatch = useDispatch();
-  console.log(products);
 
   const handleDelete = (id) => {
     const result = window.confirm("Are you Sure");

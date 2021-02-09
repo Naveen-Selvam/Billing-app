@@ -79,7 +79,7 @@ const Dahboard = (props) => {
       </div>
 
       <div>
-        {last5cust.length > 0 && <h3>Last 5 added customers</h3>}
+        {last5cust.length > 0 && <h3>Last 5 Added customers</h3>}
         <div style={{ display: "flex" }}>
           {last5cust?.map((cust) => {
             return (
@@ -98,7 +98,7 @@ const Dahboard = (props) => {
           })}
         </div>
 
-        {last5prod.length > 0 && <h3>Last 5 added products</h3>}
+        {last5prod.length > 0 && <h3>Last 5 Added Products</h3>}
         <div style={{ display: "flex" }}>
           {last5prod?.map((prod) => {
             return (
@@ -107,7 +107,7 @@ const Dahboard = (props) => {
                 style={{ padding: "0.5rem", backgroundColor: "#ebfafa" }}
               >
                 <Paper elevation={10} style={paperStyle7}>
-                  <img src={img5} height="150" width="220"></img>
+                  <img src={img5} height="150" width="190"></img>
                   <h4 style={{ color: "black" }}>Name - {prod.name}</h4>
                   <h4 style={{ color: "black" }}>Price - {prod.price}</h4>
                 </Paper>
@@ -118,7 +118,7 @@ const Dahboard = (props) => {
       </div>
 
       <div>
-        {last5bill.length > 0 && <h3>Last 5 generated Bills</h3>}
+        {last5bill.length > 0 && <h3>Last 5 Generated Bills</h3>}
         <div className="customerViewTable">
           {last5bill?.map((bill, i) => {
             return (

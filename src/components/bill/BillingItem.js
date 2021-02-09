@@ -58,13 +58,12 @@ const BillingItem = (props) => {
   };
 
   const handleAdd = () => {
-    if (
-      customer.length === 0 ||
-      product.length === 0 ||
-      date.length === 0 ||
-      qty <= 0
-    ) {
-      swal("Pls check your details");
+    if (customer.length === 0) {
+      swal("Pls select the customer name");
+    } else if (product.length === 0) {
+      swal("pls select the product");
+    } else if (qty <= 0) {
+      swal("Quantity Cannot be negative or Zero");
     } else {
       const data = {
         product: product,
@@ -181,7 +180,9 @@ const BillingItem = (props) => {
           </h2>
         ) : (
           <div>
-            <h2 style={{ textAlign: "center" }}>Items Added to Cart</h2>
+            <h2 style={{ textAlign: "center" }}>
+              Cart Items - {lineItems.length}
+            </h2>
             <div className="cardItem">
               {lineItems?.map((item, i) => {
                 return <GenerateBill key={i} {...item} />;

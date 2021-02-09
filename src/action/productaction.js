@@ -20,7 +20,8 @@ export const startGetProduct = () => {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
-        dispatch(getProduct(response.data));
+        const result = response.data;
+        dispatch(getProduct(result.reverse()));
       })
       .catch((err) => {
         alert(err.message);
