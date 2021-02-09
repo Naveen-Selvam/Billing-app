@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Grid, Paper } from "@material-ui/core";
 import { paperStyle3, paperStyle7 } from "../components/style";
 import EachCustomerBill from "../components/customer/EachCustomerBill";
+import img4 from "../img/img4.png";
+import img5 from "../img/img5.png";
 
 const Dahboard = (props) => {
   const dispatch = useDispatch();
@@ -15,7 +17,7 @@ const Dahboard = (props) => {
     dispatch(startGetCustomer());
     dispatch(startGetProduct());
     dispatch(startGetBill());
-  }, []);
+  }, [dispatch]);
 
   const customer = useSelector((state) => state.customer);
   const product = useSelector((state) => state.product);
@@ -77,7 +79,7 @@ const Dahboard = (props) => {
       </div>
 
       <div>
-        {last5cust.length > 0 && <h2>Last 5 added customers</h2>}
+        {last5cust.length > 0 && <h3>Last 5 added customers</h3>}
         <div style={{ display: "flex" }}>
           {last5cust?.map((cust) => {
             return (
@@ -86,16 +88,17 @@ const Dahboard = (props) => {
                 style={{ padding: "0.5rem", backgroundColor: "#e6ecff" }}
               >
                 <Paper elevation={10} style={paperStyle7}>
-                  <h3>Name - {cust.name}</h3>
-                  <h3>Mobile - {cust.mobile}</h3>
-                  <h3>mail-{cust.email}</h3>
+                  <img src={img4} width="210"></img>
+                  <h4 style={{ color: "black" }}>Name - {cust.name}</h4>
+                  <h4 style={{ color: "black" }}>Mobile - {cust.mobile}</h4>
+                  <h4 style={{ color: "black" }}>E-mail - {cust.email}</h4>
                 </Paper>
               </Grid>
             );
           })}
         </div>
 
-        {last5prod.length > 0 && <h2>Last 5 added products</h2>}
+        {last5prod.length > 0 && <h3>Last 5 added products</h3>}
         <div style={{ display: "flex" }}>
           {last5prod?.map((prod) => {
             return (
@@ -104,8 +107,9 @@ const Dahboard = (props) => {
                 style={{ padding: "0.5rem", backgroundColor: "#ebfafa" }}
               >
                 <Paper elevation={10} style={paperStyle7}>
-                  <h3>Name - {prod.name}</h3>
-                  <h3>Price - {prod.price}</h3>
+                  <img src={img5} height="150" width="220"></img>
+                  <h4 style={{ color: "black" }}>Name - {prod.name}</h4>
+                  <h4 style={{ color: "black" }}>Price - {prod.price}</h4>
                 </Paper>
               </Grid>
             );
@@ -114,13 +118,16 @@ const Dahboard = (props) => {
       </div>
 
       <div>
-        {last5bill.length > 0 && <h2>Last 5 generated Bills</h2>}
+        {last5bill.length > 0 && <h3>Last 5 generated Bills</h3>}
         <div className="customerViewTable">
           {last5bill?.map((bill, i) => {
             return (
               <div key={bill._id}>
                 <div>
-                  <h3>Name - {customerName[i]?.name}</h3>
+                  <h4 style={{ color: "black" }}>
+                    Name - {customerName[i]?.name}
+                  </h4>
+                  Date - {bill.date.slice(0, 10)}
                   <EachCustomerBill customer={bill} />
                 </div>
               </div>

@@ -99,7 +99,7 @@ const Inovice = (props) => {
             </Button>
           </div>
         </div>
-        <Pdf targetRef={ref} filename="code-example.pdf">
+        <Pdf targetRef={ref} filename="bill.pdf">
           {({ toPdf }) => (
             <div style={{ textAlign: "center" }}>
               <Button color="primary" onClick={toPdf}>

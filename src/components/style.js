@@ -53,7 +53,7 @@ export const paperStyle6 = {
 };
 export const paperStyle7 = {
   padding: "1rem",
-  height: "15vh",
+  height: "33vh",
   width: 220,
   margin: "10px auto",
   backgroundColor: "white",
