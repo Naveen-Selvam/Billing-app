@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Paper } from "@material-ui/core";
+import img5 from "../../img/img5.png";
 
 const GenerateBill = (props) => {
   const { product, quantity } = props;
@@ -30,9 +31,10 @@ const GenerateBill = (props) => {
   return (
     <Card
       variant="outlined"
-      style={{ width: "300px", backgroundColor: "#adad85", margin: "2px" }}
+      style={{ width: "270px", backgroundColor: "#adad85", margin: "2px" }}
     >
       <Paper elevation={20}>
+        <img src={img5} height="150" width="220"></img>
         <CardContent>
           <Typography variant="h5" component="h2">
             Name : {productDetails[0].name} - ₹{productDetails[0].price}
